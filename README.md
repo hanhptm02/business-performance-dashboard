@@ -89,7 +89,15 @@ Output: Business Performance Dashboard
     - [fact_kpi_asm](fact_kpi_asm.sql)
     - [fact_kpi_month](fact_kpi_month.sql)
     - [fact_txn_month](fact_txn_month.sql)
-  - Validate that the imported data matches the original Excel file.  
+  - Validate that the imported data matches the original Excel file.
+  - The following dimension tables are used to support the fact tables above:
+    - [dim_area](dim_area.sql)
+    - [dim_asm](dim_asm.sql)
+    - [dim_general_report_structure](dim_general_report_structure.sql)
+    - [dim_metric](dim_metric.sql)
+    - [dim_month](dim_month.sql)
+    - [dim_pos](dim_pos.sql)
+    - [dim_province](dim_province.sql)
 - Step 2: Data Processing  
   Develop stored procedure [prc_build_monthly_report](prc_build_monthly_report.sql) with time parameters to calculate and store the required metrics in fact tables:
   - [fact_area_metrics_monthly](fact_area_metrics_monthly.sql): Store monthly metric values by region  

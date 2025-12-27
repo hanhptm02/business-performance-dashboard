@@ -1,26 +1,26 @@
 # Business performance dashboard
-1. Overview  
+**1. Overview**  
 This project transforms raw data into a Power BI dashboard to provide quick insights and support business decision-making.
 
-2. Business problem  
+**2. Business problem**  
 MH Finance Solutions’ management requires business performance monitoring to:
 * Evaluate the company’s financial health
 * Compare performance across regions and sales managers
 * Support incentive scheme and performance-based compensation design
 
-3. Solution  
+**3. Solution**  
 As a Data Analyst, to address the above business problem, I applied the following approach:
 * Collected and standardized business data from multiple sources
 * Identified key performance indicators (KPIs) to be monitored
 * Built an intuitive dashboard to deliver insights and enable fast, data-driven decision-making
 
-4. Input  
+**4. Input**  
 The data source consists of the following three Excel files:
 - fact_kpi_month_raw_data: Monthly application information
 - fact_txn_month_raw_data: GL account transaction information
 - kpi_asm_data: Monthly business performance by Area Sales Manager (ASM)
 
-  4.1. fact_kpi_month_raw_data
+  **4.1. fact_kpi_month_raw_data**
   <img width="1414" height="186" alt="image" src="https://github.com/user-attachments/assets/647faa2f-c246-4665-9563-5605f5dcd596" />
   | Column name | Description | Vietnamese description |
   |-------------|-------------|-------------|
@@ -34,7 +34,7 @@ The data source consists of the following three Excel files:
   | psdn | New customer count | Số lượng KH mới |
   | max_bucket | Debt group | Nhóm nợ |
 
-  4.2. fact_txn_month_raw_data
+  **4.2. fact_txn_month_raw_data**
   <img width="1306" height="184" alt="image" src="https://github.com/user-attachments/assets/c5d0eb4e-9803-425c-b54a-2878453f7342" />
   | Column name | Description | Vietnamese description |
   |-------------|-------------|------------------------|
@@ -45,7 +45,7 @@ The data source consists of the following three Excel files:
   | amount | Transaction amount (Unit: VND) | Số tiền giao dịch |
   | d_c | Transaction direction (D: Debit, C: Credit) | Là giao dịch ghi nợ (D) hay ghi có (C) |
 
-  4.3. kpi_asm_data
+  **4.3. kpi_asm_data**
   <img width="1890" height="197" alt="image" src="https://github.com/user-attachments/assets/74c3c726-0c9d-4096-a4ff-97a83d1f7722" />
   <img width="1889" height="200" alt="image" src="https://github.com/user-attachments/assets/efde50c7-69d4-4c86-b41d-71a173bd4674" />
   | Column name | Description | Vietnamese description |
@@ -64,22 +64,22 @@ The data source consists of the following three Excel files:
   Due to merged cells and repeated month names, the column structure can be difficult to interpret. 
   Therefore, in the above data dictionary, fields are presented in a summarized form using the notation “reporting month T”.
 
-5. Output  
+**5. Output**  
 Output: Business Performance Dashboard
 * Business performance report: monitor overall company performance as well as performance by region
 * Area sales managers ranking report: support bonus calculation and performance alerts
 * KPI tracking across organizational and regional levels
 * Individual ASM performance analysis to identify top-performing sales profiles
 
-7. Tools
+**6. Tools**
 * Excel: Data source
 * DBeaver + PostgreSQL: Data processing
 * Power BI: Visualization
 
-8. Process
+**7. Process**
 <img width="1551" height="501" alt="Data Linage drawio" src="https://github.com/user-attachments/assets/ae4c64f1-945e-4188-b95b-dd583cbc0a09" />
 
-- Step 1: Data Preparation  
+- **Step 1**: Data Preparation  
   - Reformat the Excel files before importing into the database:
     - Remove merged cells  
     - Rename columns
@@ -98,24 +98,24 @@ Output: Business Performance Dashboard
     - [dim_month](dim_month.sql)
     - [dim_pos](dim_pos.sql)
     - [dim_province](dim_province.sql)
-- Step 2: Data Processing  
+- **Step 2**: Data Processing  
   Develop stored procedure [prc_build_monthly_report](prc_build_monthly_report.sql) with time parameters to calculate and store the required metrics in fact tables:
   - [fact_area_metrics_monthly](fact_area_metrics_monthly.sql): Store monthly metric values by region  
   - [fact_asm_metrics_monthly](fact_asm_metrics_monthly.sql): Store monthly metric values for each sales representative  
   <br>
   <img width="1274" height="534" alt="image" src="https://github.com/user-attachments/assets/f208b750-0c7d-4453-adfd-94bf592615dc" />
 
-- Step 3: Visualization  
+- **Step 3**: Visualization  
   - Define a list of key metrics to be monitored along with their corresponding charts and data sources  
   - Create views and import the required data into Power BI
     - [vw_rpt_general_report](vw_rpt_general_report.sql): Business performance report
     - [vw_rpt_asm_ranking](vw_rpt_asm_ranking.sql): Area sales managers ranking report
   - Build charts and format the dashboard in Power BI
   
-9. Disclaimer
+**8. Disclaimer**
 * The dataset is simulated for portfolio demonstration purposes.
 * The dashboard is presented in Vietnamese to reflect a real-world business context.
 
-9. Author  
+**9. Author**  
 Hanh Pham
 

@@ -96,7 +96,7 @@ from
 			chtv.value as hs_von,
 			chbn.value as hsbq_nhan_su
 		from fact_kpi_asm fka
-		left join fact_asm fa on fa.id = fka.sales_id
+		left join dim_asm fa on fa.id = fka.sales_id
 		left join dim_area da on da.id = fka.area_id
 		left join (select sales_id, value, month_end 
 				   from fact_asm_metrics_monthly 

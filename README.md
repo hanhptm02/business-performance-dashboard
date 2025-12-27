@@ -15,10 +15,10 @@ As a Data Analyst, to address the above business problem, I applied the followin
 * Built an intuitive dashboard to deliver insights and enable fast, data-driven decision-making
 
 4. Input  
-Nguồn dữ liệu là các file excel sau:
-- fact_kpi_month_raw_data: Thông tin của hồ sơ theo tháng
-- fact_txn_month_raw_data: Thông tin giao dịch của các tài khoản GL
-- kpi_asm_data: Thông tin về kết quả kinh doanh của từng Area Sales Manager (ASM) Files
+The data source consists of the following three Excel files:
+- fact_kpi_month_raw_data: Monthly application information
+- fact_txn_month_raw_data: GL account transaction information
+- kpi_asm_data: Monthly business performance by Area Sales Manager (ASM)
 
   4.1. fact_kpi_month_raw_data
   <img width="1414" height="186" alt="image" src="https://github.com/user-attachments/assets/647faa2f-c246-4665-9563-5605f5dcd596" />
@@ -71,15 +71,22 @@ Output: Business Performance Dashboard
 * KPI tracking across organizational and regional levels
 * Individual ASM performance analysis to identify top-performing sales profiles
 
-7. Process
+7. Tools
+* Excel: Data source
+* DBeaver + PostgreSQL: Data processing
+* Power BI: Visualization
+
+8. Process
+<img width="1551" height="501" alt="Data Linage drawio" src="https://github.com/user-attachments/assets/ae4c64f1-945e-4188-b95b-dd583cbc0a09" />
+
 - Step 1: Data Preparation  
   - Reformat the Excel files before importing into the database:
     - Remove merged cells  
     - Rename columns
   - Import the Excel files into the database.
-  - Store unstandardized data in the staging table (if needed).  
-  - Validate that the imported data matches the original Excel file.  
+  - Store unstandardized data in the staging table (if needed).
   - Transform the data and load it into fact tables.
+  - Validate that the imported data matches the original Excel file.  
 - Step 2: Data Processing  
   Develop stored procedures with time parameters to calculate and store the required metrics in fact tables:
   - fact_area_metrics_monthly: Store monthly metric values by region  
@@ -88,11 +95,6 @@ Output: Business Performance Dashboard
   - Define a list of key metrics to be monitored along with their corresponding charts and data sources  
   - Create views and import the required data into Power BI  
   - Build charts and format the dashboard in Power BI
-
-8. Tools
-* Excel: Data source
-* DBeaver + PostgreSQL: Data processing
-* Power BI: Visualization
   
 9. Disclaimer
 * The dataset is simulated for portfolio demonstration purposes.

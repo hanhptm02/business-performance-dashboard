@@ -86,14 +86,22 @@ Output: Business Performance Dashboard
   - Import the Excel files into the database.
   - Store unstandardized data in the staging table (if needed).
   - Transform the data and load it into fact tables.
+    - [fact_kpi_asm](fact_kpi_asm.sql)
+    - [fact_kpi_month](fact_kpi_month.sql)
+    - [fact_txn_month](fact_txn_month.sql)
   - Validate that the imported data matches the original Excel file.  
 - Step 2: Data Processing  
-  Develop stored procedures with time parameters to calculate and store the required metrics in fact tables:
-  - fact_area_metrics_monthly: Store monthly metric values by region  
-  - fact_asm_metrics_monthly: Store monthly metric values for each sales representative
+  Develop stored procedure [prc_build_monthly_report](prc_build_monthly_report.sql) with time parameters to calculate and store the required metrics in fact tables:
+  - [fact_area_metrics_monthly](fact_area_metrics_monthly.sql): Store monthly metric values by region  
+  - [fact_asm_metrics_monthly](fact_asm_metrics_monthly.sql): Store monthly metric values for each sales representative  
+  <br>
+  <img width="1274" height="534" alt="image" src="https://github.com/user-attachments/assets/f208b750-0c7d-4453-adfd-94bf592615dc" />
+
 - Step 3: Visualization  
   - Define a list of key metrics to be monitored along with their corresponding charts and data sources  
-  - Create views and import the required data into Power BI  
+  - Create views and import the required data into Power BI
+    - [vw_rpt_general_report](vw_rpt_general_report.sql): Business performance report
+    - [vw_rpt_asm_ranking](vw_rpt_asm_ranking.sql): Area sales managers ranking report
   - Build charts and format the dashboard in Power BI
   
 9. Disclaimer

@@ -5,7 +5,7 @@ This project transforms raw data into a Power BI dashboard to provide quick insi
 **2. Business problem**  
 MH Finance Solutions’ management requires business performance monitoring to:
 * Evaluate the company’s financial health
-* Compare performance across regions and sales managers
+* Compare performance across regions and Area Sales Managers
 * Support incentive scheme and performance-based compensation design
 
 **3. Solution**  
@@ -65,10 +65,10 @@ The data source consists of the following three Excel files:
   Therefore, in the above data dictionary, fields are presented in a summarized form using the notation “reporting month T”.
 
 **5. Output**  
-Output: Business Performance Dashboard
-* Business performance report: monitor overall company performance as well as performance by region
+Output: [Business Performance Dashboard](https://app.fabric.microsoft.com/view?r=eyJrIjoiZTIwODc0M2YtZDc0NS00MjU0LWEwZjgtOTU4N2JiNDBmOGNlIiwidCI6IjFhMTQ1ZTE3LTI5NzMtNDljMi1iY2U4LTFjNTA3MjRiZDdmMyIsImMiOjEwfQ%3D%3D)
+* Business performance report: monitor overall company performance as well as performance by area
 * Area sales managers ranking report: support bonus calculation and performance alerts
-* KPI tracking across organizational and regional levels
+* KPI tracking across organizational and areal levels
 * Individual ASM performance analysis to identify top-performing sales profiles
 
 **6. Tools**
@@ -100,8 +100,8 @@ Output: Business Performance Dashboard
     - [dim_province](dim_province.sql)
 - **Step 2**: Data Processing  
   Develop stored procedure [prc_build_monthly_report](prc_build_monthly_report.sql) with time parameters to calculate and store the required metrics in fact tables:
-  - [fact_area_metrics_monthly](fact_area_metrics_monthly.sql): Store monthly metric values by region  
-  - [fact_asm_metrics_monthly](fact_asm_metrics_monthly.sql): Store monthly metric values for each sales representative  
+  - [fact_area_metrics_monthly](fact_area_metrics_monthly.sql): Store monthly metric values by area  
+  - [fact_asm_metrics_monthly](fact_asm_metrics_monthly.sql): Store monthly metric values for each Area Sales Managers
   <br>
   <img width="1274" height="534" alt="image" src="https://github.com/user-attachments/assets/f208b750-0c7d-4453-adfd-94bf592615dc" />
 
@@ -111,6 +111,7 @@ Output: Business Performance Dashboard
     - [vw_rpt_general_report](vw_rpt_general_report.sql): Business performance report
     - [vw_rpt_asm_ranking](vw_rpt_asm_ranking.sql): Area sales managers ranking report
   - Build charts and format the dashboard in Power BI
+  - Identify key insights through data visualization
   
 **8. Disclaimer**
 * The dataset is simulated for portfolio demonstration purposes.

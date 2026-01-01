@@ -69,7 +69,14 @@ Output: [Business Performance Dashboard](https://app.fabric.microsoft.com/view?r
 * Business performance report: monitor overall company performance as well as performance by area
 * Area sales managers ranking report: support bonus calculation and performance alerts
 * KPI tracking across organizational and areal levels
-* Individual ASM performance analysis to identify top-performing sales profiles
+* Individual ASM performance analysis to identify top-performing sales profiles  
+
+  -> **Insights Addressing Business Problems:**  
+  After the data is visualized through dashboards, we can address the business problems.  
+  - **First, the overall financial health of the company can be assessed**: In general, the company is operating profitably, with most financial indicators showing positive signals. This performance is driven by contributions from multiple areas; however, one area — the Southeast region — is operating at a loss. Therefore, management needs to carefully review and reassess the business strategy in this area.
+  In addition, the non-performing loan (NPL) ratio of the company, as well as of all areas, remains very high. This indicates that although the business is generating profits, the overall risk level of the company is significant.  
+  - **Second, the dashboard enables comparison of business performance across different areas**: As mentioned above, the Southeast region is experiencing severe losses, while the Southwest region is the best-performing area.  
+  - **Finally, the dashboard supports the evaluation of Area Sales Manager (ASM) performance**: It allows users to quickly identify top-performing and underperforming ASMs, as well as performance gaps across different KPIs. Moreover, it helps define the profile of a high-performing versus a low-performing ASM by highlighting which criteria are being met and which are not.
 
 **6. Tools**
 * Excel: Data source
@@ -77,7 +84,7 @@ Output: [Business Performance Dashboard](https://app.fabric.microsoft.com/view?r
 * Power BI: Visualization
 
 **7. Process**
-<img width="1551" height="501" alt="Data Linage drawio" src="https://github.com/user-attachments/assets/ae4c64f1-945e-4188-b95b-dd583cbc0a09" />
+<img width="1552" height="501" alt="Data Linage drawio" src="https://github.com/user-attachments/assets/5841af6e-a4d3-48a7-89c5-06450b2a7c55" />
 
 - **Step 1**: Data Preparation  
   - Reformat the Excel files before importing into the database:

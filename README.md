@@ -5,7 +5,7 @@ This project transforms raw data into a Power BI dashboard to provide quick insi
 **2. Business problem**  
 MH Finance Solutions’ management requires business performance monitoring to:
 * Evaluate the company’s financial health
-* Compare performance across regions and Area Sales Managers
+* Compare performance across areas and Area Sales Managers
 * Support the development of incentive policies and performance improvement mechanisms
 
 **3. Solution**  

@@ -88,7 +88,7 @@ Output: [Business Performance Dashboard](https://app.fabric.microsoft.com/view?r
     It allows users to quickly identify top-performing and underperforming ASMs, as well as performance gaps across different KPIs.
     <img width="1353" height="790" alt="image" src="https://github.com/user-attachments/assets/13c59bd4-de82-4cb3-8a4d-4dcee85ba5a0" />
 
-    Moreover, it helps define the profiles of high-performing and low-performing employees based on performance evaluation criteria.
+    Moreover, it helps define the profiles of high-performing and low-performing ASMs based on performance evaluation criteria. After monitoring the period from January 2023 to May 2023, top-performing ASM in each month consistently led across four key criteria: number of new customers, outstanding balance of new customers, number of submitted applications, and number of approved applications. However, their application approval rate was slightly lower compared to other ASMs. This may not indicate a negative signal, but rather suggest more rigorous application screening, which helps mitigate credit risk
     <img width="1353" height="403" alt="image" src="https://github.com/user-attachments/assets/cd8a3226-08ea-4c43-9508-a5410df6efea" />
 
 **6. Tools**

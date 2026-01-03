@@ -109,7 +109,7 @@ Output: [Business Performance Dashboard](https://app.fabric.microsoft.com/view?r
     - [fact_kpi_asm](fact_kpi_asm.sql)
     - [fact_kpi_month](fact_kpi_month.sql)
     - [fact_txn_month](fact_txn_month.sql)
-  - Validate that the imported data matches the original Excel file.
+  - Validate that the imported data matches the original Excel files.
   - The following dimension tables are used to support the fact tables above:
     - [dim_area](dim_area.sql)
     - [dim_asm](dim_asm.sql)

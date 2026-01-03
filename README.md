@@ -6,7 +6,7 @@ This project transforms raw data into a Power BI dashboard to provide quick insi
 MH Finance Solutions’ management requires business performance monitoring to:
 * Evaluate the company’s financial health
 * Compare performance across regions and Area Sales Managers
-* Support incentive scheme and performance-based compensation design
+* Support the development of incentive policies and performance improvement mechanisms
 
 **3. Solution**  
 As a Data Analyst, to address the above business problem, I applied the following approach:
@@ -16,7 +16,7 @@ As a Data Analyst, to address the above business problem, I applied the followin
 
 **4. Input**  
 The data source consists of the following three Excel files:
-- fact_kpi_month_raw_data: Monthly application information
+- fact_kpi_month_raw_data: Monthly loan application information
 - fact_txn_month_raw_data: GL account transaction information
 - kpi_asm_data: Monthly business performance by Area Sales Manager (ASM)
 
@@ -73,10 +73,23 @@ Output: [Business Performance Dashboard](https://app.fabric.microsoft.com/view?r
 
   -> **Insights Addressing Business Problems:**  
   After the data is visualized through dashboards, we can address the business problems.  
-  - **First, the overall financial health of the company can be assessed**: In general, the company is operating profitably, with most financial indicators showing positive signals. This performance is driven by contributions from multiple areas; however, one area — the Southeast region — is operating at a loss. Therefore, management needs to carefully review and reassess the business strategy in this area.
-  In addition, the non-performing loan (NPL) ratio of the company, as well as of all areas, remains very high. This indicates that although the business is generating profits, the overall risk level of the company is significant.  
-  - **Second, the dashboard enables comparison of business performance across different areas**: As mentioned above, the Southeast region is experiencing severe losses, while the Southwest region is the best-performing area.  
-  - **Finally, the dashboard supports the evaluation of Area Sales Manager (ASM) performance**: It allows users to quickly identify top-performing and underperforming ASMs, as well as performance gaps across different KPIs. Moreover, it helps define the profile of a high-performing versus a low-performing ASM by highlighting which criteria are being met and which are not.
+  - **First, the overall financial health of the company can be assessed**:  
+    In general, the company is operating profitably, with most financial indicators showing positive signals. This performance is driven by contributions from multiple areas; however, one area — the Southeast region (Đông Nam Bộ) — is operating at a loss. Therefore, management needs to carefully review and reassess the business strategy in this area.
+    <img width="1844" height="442" alt="image" src="https://github.com/user-attachments/assets/8aa2f472-b8b2-4070-849c-bc1391cb96e1" />
+
+    In addition, the non-performing loan (NPL) ratio of the company, as well as of all areas, remains very high. This indicates that although the business is generating profits, the overall risk level of the company is significant.
+    <img width="936" height="340" alt="image" src="https://github.com/user-attachments/assets/847397ff-e39e-4d90-9c7a-4337c611940e" />
+ 
+  - **Second, the dashboard enables comparison of business performance across different areas**:  
+    As mentioned above, the Southeast region is experiencing severe losses, while the Southwest region (Tây Nam Bộ) is the best-performing area.
+    <img width="915" height="456" alt="image" src="https://github.com/user-attachments/assets/8484c8ab-6c31-47a0-b994-e30b39b42995" />
+
+  - **Finally, the dashboard supports the evaluation of Area Sales Manager (ASM) performance**:  
+    It allows users to quickly identify top-performing and underperforming ASMs, as well as performance gaps across different KPIs.
+    <img width="1353" height="790" alt="image" src="https://github.com/user-attachments/assets/13c59bd4-de82-4cb3-8a4d-4dcee85ba5a0" />
+
+    Moreover, it helps define the profiles of high-performing and low-performing employees based on performance evaluation criteria.
+    <img width="1353" height="403" alt="image" src="https://github.com/user-attachments/assets/cd8a3226-08ea-4c43-9508-a5410df6efea" />
 
 **6. Tools**
 * Excel: Data source
